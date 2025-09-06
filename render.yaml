@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: anon-chat-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    environment:
+      pythonVersion: 3.10.13
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
